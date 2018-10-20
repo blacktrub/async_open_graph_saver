@@ -18,7 +18,21 @@ Install all dependencies of project
 pip install -r requirements.txt
 ```
 
-Run it
+Create database and table
+```postgresql
+CREATE DATABASE open_graph_links OWNER 'admin';
+
+CREATE TABLE links(
+  id serial PRIMARY KEY, 
+  url text, 
+  title text, 
+  description text, 
+  image text);
+```
+
+Also you can set own settings of database in settings.py module
+
+And now you may run server
 ```commandline
 python server.py
 ```
